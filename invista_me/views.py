@@ -8,4 +8,9 @@ def contato(request):
     return HttpResponse('<h1>Página de contato</h1>')
 
 def minha_historia(request):
-    return render(request,'investimentos/minha_historia.html')
+    pessoa = {
+        'nome': 'Robert',
+        'idade': 30,
+        'profissao': 'Atendente'
+    }
+    return render(request,'investimentos/minha_historia.html', pessoa)
