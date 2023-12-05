@@ -1,0 +1,17 @@
+<h1>Listagem de Investimentos</h1>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Investimento</th>
+        <th>Valor</th>
+        <th>Detalhes</th>
+    </tr>
+    {% for dado in dados %}
+    <tr>
+        <td>{{dado.id}}</td>
+        <td>{{dado.investimento}}</td>
+        <td>{{dado.valor}}</td>
+        <td><Button><a href="{% url 'detalhe' dado.id %}">Mais...</a></Button></td>
+    </tr>
+    {% endfor %}
+</table>
