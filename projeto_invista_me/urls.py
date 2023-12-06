@@ -22,5 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.investimentos, name='investimentos'),
     path('/<int:id_investimento>', views.detalhe, name='detalhe'),
-    path('novo_investimento/', views.novo_investimento, name='novo_investimento'),
+    path('novo_investimento/', views.criar, name='novo_investimento'),
+    path('novo_investimento/<int:id_investimento>', views.editar, name='editar'),
+    path('excluir_investimento/<int:id_investimento>', views.excluir, name='excluir'),
 ]
